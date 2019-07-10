@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Clase ejemplo 2</title>
+<link rel="stylesheet" type="text/css" href="css/animations.css">
+<style>
+body{
+	padding:0;
+	margin:0;
+	background-color:#CCC;
+}
+.generalWrap{
+	position:absolute;
+	left:0;
+	top:0;
+	width:95%;
+	height:auto;
+	overflow:hidden;
+}
+.animableContainer{
+	position:absolute;
+	left:0;
+	top:0;	
+	width:100%;
+	height:100%;
+}
+.animableContainer img{
+	position:absolute;
+	left:0;
+	top:0;	
+}
+.landscape{
+    position: relative;
+    width:100%;
+    height: 600px;
+}
+.landscape IMG{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.landscape IMG:nth-child(1){
+    
+}
+.landscape IMG:nth-child(2){
+   animation-name: darkness;
+	-moz-animation-name: darkness;
+	-webkit-animation-name: darkness;
+	-moz-animation-duration: 30s;
+	animation-duration: 30s; 
+	-webkit-animation-duration: 30s;
+	animation-delay:0s;
+	animation-fill-mode:forwards;
+}
+.landscape IMG:nth-child(3){
+	opacity:0;
+   animation-name: darkness;
+	-moz-animation-name: darkness;
+	-webkit-animation-name: darkness;
+	-moz-animation-duration: 30s;
+	animation-duration: 30s; 
+	-webkit-animation-duration: 30s;
+	animation-delay:30s;
+	animation-fill-mode:forwards;
+}
+.frame1 {
+	
+}
+
+.frame2 {
+	
+}
+
+/***FRAMES CHANGE ***/
+.frameXX{
+	animation-name: fadeOut1;
+	-moz-animation-name: fadeOut1;
+	-webkit-animation-name: fadeOut1;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s; 
+	-webkit-animation-duration: 2s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+}
+.spider{
+    position: absolute;
+    width:200px;
+    animation-name: fromTop1_bounce;
+	-moz-animation-name: fromTop1_bounce;
+	-webkit-animation-name: fromTop1_bounce;
+	-moz-animation-duration: 4s;
+	animation-duration: 4s; 
+	-webkit-animation-duration: 4s;
+	animation-delay:0s;
+    animation-fill-mode:forwards;
+    z-index: 100000;
+}
+.frame1{
+	
+}
+
+.frame2{
+	
+}
+
+.frame3{
+
+}
+
+</style>
+</head>
+
+<body>
+<div class="generalWrap">
+
+    <div class="frame1">
+        <img class="spider" src="img/spiderman.png" />
+        <div class="landscape">
+            <img id="bg1" src="img/paisaje1.jpg" />
+            <img id="bg2"  src="img/paisaje2.jpg" />
+			<img id="bg3"  src="img/paisaje3.jpg" />
+        </div>
+    </div>
+     
+    <div class="frame2">
+        
+        
+    </div>
+  	<div class="frame3">
+     	
+     </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>300_600</title>
+<style>
+body{
+	padding:0;
+	margin:0;
+	background-color:#CCC;
+}
+.generalWrap{
+	position:absolute;
+	left:0;
+	top:0;
+	width:300px;
+	height:600px;
+	overflow:hidden;
+}
+.animableContainer{
+	position:absolute;
+	left:0;
+	top:0;	
+	width:100%;
+	height:100%;
+}
+.animableContainer img{
+	position:absolute;
+	left:0;
+	top:0;	
+}
+.frame1 .obj1 img{
+	
+}
+.frame1 .obj2 img{
+	top:34px;
+	left:40px;
+	
+}
+.frame1 .obj3 img{
+	top:230px;
+	left:0px;
+	
+}
+.frame1 .obj4 img{
+	top:170px;
+	left:43%;
+	width:150px;
+}
+.frame2 .obj1 img{
+	
+}
+.frame2 .obj2 img{
+	top:27px;
+	left:15px;
+}
+.frame2 .obj3 img{
+	top:250px;
+	left:70px;
+}
+.frame2 .obj4 img{
+	top:170px;
+	left:65px;
+}
+
+.frame3 .obj1 img{
+	
+}
+.frame3 .obj2 img{
+	top:51%;
+	left:15%;
+}
+.frame3 .obj3 img{
+	top:30.8%;
+	left:23px;
+	width:250px;
+}
+
+.frame1 .obj2 {
+	animation-name: fromTop1;
+	-moz-animation-name: fromTop1;
+	-webkit-animation-name: fromTop1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s; 
+	-webkit-animation-duration: 5s;
+}
+.frame1 .obj3{
+	animation-name: fromLeft1;
+	-moz-animation-name: fromLeft1;
+	-webkit-animation-name: fromLeft1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s; 
+	-webkit-animation-duration: 5s;
+}
+.frame1 .obj4{
+	animation-name: fromRight1;
+	-moz-animation-name: fromRight1;
+	-webkit-animation-name: fromRight1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s; 
+	-webkit-animation-duration: 5s;
+}
+
+
+.frame2 .obj1{
+	animation-name: fadeIn1;
+	-moz-animation-name: fadeIn1;
+	-webkit-animation-name: fadeIn1;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s; 
+	-webkit-animation-duration: 2s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+	
+}
+.frame2 .obj2{
+	animation-name: fromLeft1;
+	-moz-animation-name: fromLeft1;
+	-webkit-animation-name: fromLeft1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s; 
+	-webkit-animation-duration: 5s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+}
+.frame2 .obj3{
+	animation-name: fromRight1;
+	-moz-animation-name: fromRight1;
+	-webkit-animation-name: fromRight1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s; 
+	-webkit-animation-duration: 5s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+}
+.frame2 .obj4{
+	animation-name: fromBottom1;
+	-moz-animation-name: fromBottom1;
+	-webkit-animation-name: fromBottom1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-duration: 5s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+}
+
+.frame3 .obj1{
+	animation-name: fadeIn1;
+	-moz-animation-name: fadeIn1;
+	-webkit-animation-name: fadeIn1;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s; 
+	-webkit-animation-duration: 2s;
+	animation-delay:10s;
+	animation-fill-mode:forwards;
+}
+.frame3 .obj2{
+	animation-name: fromBottom1;
+	-moz-animation-name: fromBottom1;
+	-webkit-animation-name: fromBottom1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-duration: 5s;
+	animation-delay:10s;
+	animation-fill-mode:forwards;	
+}
+
+.frame3 .obj3{
+	animation-name: stelarIn1;
+	-moz-animation-name: stelarIn1;
+	-webkit-animation-name: stelarIn1;
+	-moz-animation-duration: 5s;
+	animation-duration: 5s; 
+	-webkit-animation-duration: 5s;
+	animation-delay:10s;
+	animation-fill-mode:forwards;
+}
+/***FRAMES CHANGE ***/
+.frame1{
+	animation-name: fadeOut1;
+	-moz-animation-name: fadeOut1;
+	-webkit-animation-name: fadeOut1;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s; 
+	-webkit-animation-duration: 2s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+}
+
+.frame2{
+	opacity:0;
+	animation-name: appearIn;
+	-moz-animation-name: appearIn;
+	-webkit-animation-name: appearIn;
+	-moz-animation-duration: .1s;
+	animation-duration: .1s; 
+	-webkit-animation-duration: .1s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+}
+
+.frame3{
+	opacity:0;
+	animation-name: appearIn;
+	-moz-animation-name: appearIn;
+	-webkit-animation-name: appearIn;
+	-moz-animation-duration: .1s;
+	animation-duration: .1s; 
+	-webkit-animation-duration: .1s;
+	animation-delay:10s;
+	animation-fill-mode:forwards;
+}
+/***ANIMATIONS***/
+@keyframes appearIn{
+	0%{			
+		opacity:0;
+	  }
+	  1%{
+		  opacity:1;
+	  }
+	 100% {				
+		opacity:1;
+	  }	
+}
+@keyframes appearOut{
+	0%{			
+		opacity:1;
+	  }
+	 1%{
+		opacity:0;
+	 }
+	 100% {				
+		opacity:0;
+	  }	
+}
+@keyframes fromTop1{
+	0%{			
+		top:-100%;
+		opacity:0;
+	  }
+	 30% {				
+		top:0px;
+		opacity:1;
+	  }
+	  100% {				
+		top:0px;
+		opacity:1;
+	  }	
+	
+}
+@keyframes fromBottom1{
+	0%{			
+		top:100%;
+		opacity:0;
+	  }
+	 30% {				
+		top:0px;
+		opacity:1;
+	  }
+	  100% {				
+		top:0px;
+		opacity:1;
+	  }	
+	
+}
+@keyframes fromLeft1{
+	0%{			
+		left:-200%;
+		opacity:0;
+	  }
+	 30% {				
+		left:0px;
+		opacity:1;
+	  }
+	  100% {				
+		left:0px;
+		opacity:1;
+	  }	
+}
+@keyframes fromRight1{
+	0%{			
+		left:200%;
+		opacity:0;
+	  }
+	 30% {				
+		left:0px;
+		opacity:1;
+	  }
+	  100% {				
+		left:0px;
+		opacity:1;
+	  }	
+}
+@keyframes fadeIn1{
+	0%{			
+		opacity:0;
+	  }
+	 100% {				
+		opacity:1;
+	  }	
+}
+@keyframes fadeOut1{
+	0%{			
+		opacity:1;
+	  }
+	 100% {				
+		opacity:0;
+	  }	
+}
+@keyframes stelarIn1{
+	0%{			
+		opacity:0;
+		transform:scale(7,7);
+	  }
+	  30% {				
+		opacity:1;
+		transform:scale(1,1);
+	  }	
+	 100% {				
+		opacity:1;
+		transform:scale(1,1);
+	  }	
+}
+
+</style>
+</head>
+
+<body>
+<div class="generalWrap">
+
+    <div class="frame1">
+        <div class="animableContainer obj1"><img src="img/d1_bg.jpg"/></div>
+        <div class="animableContainer obj2"><img src="img/d1_msg.png"/></div>
+        <div class="animableContainer obj3"><img src="img/d1_player.png"/></div>
+        <div class="animableContainer obj4"><img src="img/d3_logo.png"/></div>
+        	
+    </div>
+     
+    <div class="frame2">
+        <div class="animableContainer obj1"><img src="img/d2_bg.jpg" /></div>
+        <div class="animableContainer obj2"><img src="img/d2_desc.jpg" /></div>
+        <div class="animableContainer obj3"><img src="img/d2_envio.png" /></div>
+        
+    </div>
+  	<div class="frame3">
+     	<div class="animableContainer obj1"><img src="img/d1_bg.jpg"/></div>
+		<div class="animableContainer obj2"><img src="img/d3_btt.jpg"  /></div>	    
+		<div class="animableContainer obj3"><img src="img/d3_logo.png" /></div>
+     </div>
+</div>
+</body>
+</html>
